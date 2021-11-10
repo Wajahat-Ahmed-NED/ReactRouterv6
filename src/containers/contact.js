@@ -12,7 +12,7 @@ function Contact() {
   return (
     <>
       {dt.map((e, i) => {
-        return <p key={i}>{e.id}</p>;
+        return <p key={i} >{e.id}</p>;
       })}
       <h1>Contact</h1>
     </>

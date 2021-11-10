@@ -7,7 +7,7 @@ function Home() {
       name: "Ali",
       age: 18,
     };
-    navigate("about", { state: obj });
+    navigate("/about", { state: obj });
   };
 
   return (
@@ -25,7 +25,19 @@ function Home() {
             >
               Home
             </NavLink>
+            {/* Navlink is used only for styling the active route */}
+            
           </li>
+          <li><Link className={(routeStatus) => {
+                if (routeStatus.isActive == true) {
+                  return "active";
+                }
+              }}
+              to="/"
+            >
+              Home
+              
+            </Link></li>
           <li>
             <NavLink to="/about">about</NavLink>
           </li>
